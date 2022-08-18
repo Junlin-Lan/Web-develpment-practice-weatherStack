@@ -1,0 +1,625 @@
+$test : 1px black solid;
+$default_bc: #fff;
+$global_pd: 0 100px;
+
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+.section1{
+  background: url(https://weatherstack.com/site_images/mountains.svg), linear-gradient(135deg, #1f4e69 0, #164058 100%);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 20px 0 160px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: $global_pd;
+
+    .logo{
+      .logo-img{
+        width: 202px;
+        height: 28px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      li {
+        display: block;
+        margin: 0 0 0 25px;
+        font-size: 13px;
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: 700;
+        }
+        .logIn{
+          display: inline-block;
+          padding: 10px 10px;
+          border-radius: 3px;
+          background: rgba(255, 255, 255, .15);
+        }
+        .signUp {
+          display: inline-block;
+          padding: 10px 10px;
+          border-radius: 3px;
+          background: #f47b21;
+        }
+      }
+      .status {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 25px;
+        background: #47c652;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__main {
+    padding: 70px 100px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__left{
+      width: 28%;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-size: 17px;
+
+      }
+      .button {
+        font-size: 17px;
+        font-weight: 700;
+        text-align: center;
+        display: inline-block;
+        border: 0 solid rgba(255, 255, 255, 1);
+        border-radius: 17px;
+        line-height: 20px;
+        margin: 15px 0 30px 0;
+        padding: 10px 0;
+        width: 388px;
+        background: rgba(255, 255, 255, .1);
+      }
+      a {
+        font-size: 14px;
+        text-align: center;
+        width: 230px;
+        height: 60px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        display: inline-block;
+        padding: 20px 10px;
+        border-radius: 3px;
+        background: #f47b21;
+      }
+      .itsFree {
+        position: relative;
+        left:250px;
+        bottom: 40px;
+      }
+    }
+
+    &__right {
+      width: 500px;
+      border-radius: 10px;
+      right: 15px;
+      top: 14px;
+      border: 4px solid #727272;
+      background: #16394c;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-bottom: 10px;
+
+      .row1 {
+        text-align: center;
+        .row1-h1{
+          font-size: medium;
+        }
+      }
+
+      .row2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .currentWeather {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .icon{
+            width: 140px;
+            height: 137px;
+          }
+          .currentWeather-h3 {
+            margin: -30px 0 0;
+            font-size: 13px;
+            font-weight: 900;
+          }
+        }
+        .conditions {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .conditions-h4 {
+            font-size: 13px;
+            margin: unset;
+            line-height: 18px;
+          }
+        }
+      }
+
+      .row3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 30px;
+        .weekly-weather {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 95px;
+          height: 107px;
+          .weekly-weather-h5, .weekly-weather-h6{
+            margin: 0;
+          }
+        }
+        .icon {
+          width: 80px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+.section2 {
+  padding: 40px 100px 12px;
+  background: #eff2f5;
+  margin: 0 auto;
+  .customers {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    .happyCustomers{
+      padding: 20px 50px 0 0;
+      font-weight: bolder;
+    }
+    .deloitte-img {
+      width: 187px;
+      height: 50px;
+      background: url(https://weatherstack.com/site_images/client_deloitte.svg);
+      background-size: 120px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .microsoft-img {
+      width: 187px;
+      height: 50px;
+      background: url(https://weatherstack.com/site_images/client_microsoft.svg);
+      background-size: 135px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .wb-img {
+      background: url(https://weatherstack.com/site_images/client_warnerbros.svg);
+      background-size: 48px;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 110px;
+    }
+    .wawa-img {
+      background: url(https://weatherstack.com/site_images/client_wawa.svg);
+      background-size: 85px;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: -4px;
+      width: 132px;
+      left: 4px;
+    }
+    .schneider-img {
+      width: 187px;
+      height: 50px;
+      background: url(https://weatherstack.com/site_images/client_schneider.svg);
+      background-size: 125px;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 4px;
+    }
+    .ericsson-img{
+      background: url(https://weatherstack.com/site_images/client_ericsson_2.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 112px;
+      top: -1px;
+    }
+
+  }
+}
+
+.section3 {
+  background: $default_bc;
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  .features {
+    background: #eff2f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border-radius: 5px;
+    .features-item {
+      .features-item-icon {
+        width: 30px;
+      }
+      margin: 0 12px;
+    }
+  }
+  &__main {
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      width: 440px;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      ul {
+        list-style: none;
+        padding-inline-start: 0;
+        line-height: 2rem;
+      }
+    }
+
+    img{
+      width: 635px;
+      height: 347px;
+    }
+  }
+}
+
+.section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #184157 url(https://weatherstack.com/site_images/bg_waves_4.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding: 40px 0 0 0;
+  text-align: center;
+  color: #fff;
+  .example{
+    background: #416376;
+    margin: 0 auto;
+    width: 100px;
+    height: 50px;
+    padding-top: 15px;
+    border-radius: 99px;
+    text-align: center;
+  }
+  &__title{
+    font-size: 25px;
+    margin-top: 30px;
+  }
+  h5 {
+    font-size: 20px;
+    width: 600px;
+    margin: 0 auto;
+  }
+  &__menu {
+    background: white;
+    display: flex;
+    margin: 30px auto 15px;
+    border-radius: 5px;
+
+    &__item {
+      width: 225px;
+      padding: 16px 0 18px;
+      a {
+        text-decoration: none;
+        color: #283f59 ;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    .item1 {
+      background-color: #f47b21;
+      border-radius: 5px 0 0 5px;
+    }
+    .item2 {
+      border-left: 2px #d3d3d3 solid;
+      border-right: 2px #d3d3d3 solid;
+    }
+  }
+  &__main {
+    border-radius: 10px;
+    width: 675px;
+    height: 740px;
+    background: #04151c;
+  }
+  &__features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 100px;
+    &__item {
+      flex: 0 0 32.5%;
+      text-align: left;
+      padding: 20px 20px;
+      background: rgba(124, 152, 168, 0.37);
+      border-radius: 5px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+      h3 {
+        display: inline-block;
+        margin: 0 0 0 10px;
+        font-size: 1rem;
+      }
+      i {
+        font-size: 2rem;
+        position: relative;
+        top: 10px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.section5 {
+  padding: 40px 100px;
+  text-align: center;
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 20px;
+    width: 600px;
+    margin: 0 auto;
+  }
+  &__companies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    list-style: none;
+    max-width: 1170px;
+    height: 230px;
+    padding: 0;
+    margin: 40px auto;
+    li {
+      border-radius: 5px;
+    }
+    &__daimler {
+      width: 250px;
+      height: 100px;
+      background: #263e6a url(https://weatherstack.com/site_images/client_white_daimler.svg);
+      background-size: 175px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__deloitte {
+      width: 250px;
+      height: 100px;
+      background: #eef2f5 url(https://weatherstack.com/site_images/client_deloitte.svg);
+      background-size: 150px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__ericsson {
+      background: #01275b url(https://weatherstack.com/site_images/client_white_ericsson_2.svg);
+      background-size: 65px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 135px;
+    }
+    &__microsoft {
+      width: 250px;
+      height: 100px;
+      background: #eef2f5 url(https://weatherstack.com/site_images/client_microsoft.svg);
+      background-size: 175px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__schneider {
+      background: #009e4d url(https://weatherstack.com/site_images/client_white_schneider.svg);
+      background-size: 150px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 200px;
+      margin-right: 0;
+    }
+    &__wb {
+      background: #027ac2 url(https://weatherstack.com/site_images/client_white_warnerbros.svg);
+      background-size: 65px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 190px;
+      height: 100px;
+    }
+    &__wawa {
+      width: 250px;
+      height: 100px;
+      background: #ee2e25 url(https://weatherstack.com/site_images/client_white_wawa.svg);
+      background-size: 110px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__ca {
+      background: #eef2f5 url(https://weatherstack.com/site_images/client_canda.svg);
+      background-size: 90px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 135px;
+      height: 100px;
+    }
+    &__mckinsey {
+      background: #23477f url(https://weatherstack.com/site_images/client_mckinsey.svg);
+      background-size: 250px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-position-x: 10px;
+      width: 260px;
+      height: 100px;
+    }
+    &__rimowa {
+      background: #eef2f5 url(https://weatherstack.com/site_images/client_rimowa.svg);
+      background-size: 155px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 0;
+      width: 250px;
+      height: 100px;
+    }
+  }
+}
+
+.section6 {
+  background: #eef2f5;
+  padding: 45px 0 50px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  h3 {
+    padding-right: 30px;
+    font-size: 17px;
+  }
+  span {
+    position: relative;
+    top: 1rem;
+    height: 16px;
+    font-size: large;
+    font-weight: bold;
+  }
+  a {
+    text-decoration: none;
+    background: #f47b21;
+    padding: 17px 15px;
+    width: auto;
+    height: auto;
+    margin-left: 20px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+
+footer {
+  background: #184157;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 135px 60px;
+  color: #fff;
+
+  .footer__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: 14px;
+    width: 1170px;
+    ul {
+      flex: 0 0 23%;
+      list-style: none;
+      .heading {
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      li {
+        line-height: 30px;
+      }
+    }
+
+  }
+  .right {
+    margin-left: 100px;
+    font-size: 12px;
+    position: relative;
+    top: 3px;
+    vertical-align: top;
+    width: 250px;
+    img {
+      width: 197px;
+      height: 35px;
+      margin-bottom: 72px;
+    }
+    .socialMedias {
+      margin-bottom: 20px;
+      .twitter {
+        display: inline-block;
+        width: 30px;
+        height: 25px;
+        background: url(https://weatherstack.com/site_images/twitter-original.svg);
+        background-size: cover ;
+        margin-right: 5px;
+      }
+      .facebook{
+        display: inline-block;
+        position: relative;
+        top:2px;
+        width: 30px;
+        height: 30px;
+        background: url(https://weatherstack.com/site_images/facebook-original.svg);
+        background-size: cover ;
+        margin-right: 5px;
+      }
+      .linkedin {
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        width: 30px;
+        height: 30px;
+        background: url(https://weatherstack.com/site_images/linkedin-original.svg);
+        background-size: cover ;
+        margin-right: 5px;
+      }
+      .github {
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        width: 30px;
+        height: 30px;
+        background: url(https://weatherstack.com/site_images/github-original.svg);
+        background-size: cover ;
+        margin-right: 5px;
+      }
+    }
+  }
+
+}
